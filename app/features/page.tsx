@@ -20,6 +20,17 @@ import {
   Smartphone,
   Globe,
   Clock,
+  Smartphone as Mobile,
+  QrCode as QRCode,
+  ShoppingCart,
+  Truck,
+  Calculator,
+  ChefHat,
+  Monitor,
+  Printer,
+  BookOpen,
+  PieChart,
+  Building,
 } from "lucide-react"
 
 export default function FeaturesPage() {
@@ -32,11 +43,11 @@ export default function FeaturesPage() {
       features: [
         {
           title: "Built-in CRM Module",
-          description: "Capture detailed customer profiles and insights to build stronger relationships.",
+          description: "Build stronger relationships with a built-in CRM. Capture customer profiles, segment groups, and create targeted promotions to improve loyalty and repeat business.",
         },
         {
           title: "Intelligent Grouping",
-          description: "Segment customers based on buying patterns, preferences, and behaviors.",
+          description: "Segment customers based on buying patterns, preferences, and behaviors for targeted marketing.",
         },
         {
           title: "Personalized Engagement",
@@ -56,7 +67,7 @@ export default function FeaturesPage() {
       features: [
         {
           title: "Multi-Channel Payments",
-          description: "Accept payments across in-store, e-commerce, and mobile channels seamlessly.",
+          description: "Accept payments across all channels—store, online, and mobile. Secure, fast, and flexible with simplified reconciliation for error-free financial management.",
         },
         {
           title: "Multiple Payment Methods",
@@ -80,7 +91,7 @@ export default function FeaturesPage() {
       features: [
         {
           title: "User-Friendly Interface",
-          description: "Clean, intuitive design that requires minimal training for your staff.",
+          description: "User-friendly POS billing for faster checkouts, fewer errors, and improved customer satisfaction. Real-time updates keep every transaction accurate.",
         },
         {
           title: "Quick Processing",
@@ -104,7 +115,7 @@ export default function FeaturesPage() {
       features: [
         {
           title: "Real-time Tracking",
-          description: "Track ingredients and products in real time with complete visibility.",
+          description: "Track ingredients and stock in real time. Reduce waste, automate reordering, and maintain consistent supply for efficient operations and profitability.",
         },
         {
           title: "Usage Monitoring",
@@ -128,7 +139,7 @@ export default function FeaturesPage() {
       features: [
         {
           title: "Centralized Program",
-          description: "Manage all loyalty and rewards from one integrated system.",
+          description: "Centralized rewards system to encourage repeat visits. Track points, manage redemptions, and deliver personalized offers that strengthen customer retention.",
         },
         {
           title: "Points Tracking",
@@ -152,7 +163,7 @@ export default function FeaturesPage() {
       features: [
         {
           title: "Barcode & QR Scanning",
-          description: "Advanced traceability with barcode and QR code scanning capabilities.",
+          description: "Track every ingredient and material with barcode/QR codes. Gain full stock visibility, simplify audits, and ensure food safety with real-time updates.",
         },
         {
           title: "Real-time Tracking",
@@ -176,7 +187,7 @@ export default function FeaturesPage() {
       features: [
         {
           title: "Real-time Insights",
-          description: "Monitor sales trends, inventory usage, and staff performance instantly.",
+          description: "Monitor sales, inventory, and performance in real time. Identify trends, optimize menus, and make data-driven decisions with instant insights.",
         },
         {
           title: "Instant Alerts",
@@ -200,7 +211,7 @@ export default function FeaturesPage() {
       features: [
         {
           title: "Dynamic Catalog",
-          description: "Create and maintain rich, dynamic product catalogs with ease.",
+          description: "Easily update menus, images, and prices across all platforms. Ensure consistency, launch promotions faster, and boost customer engagement.",
         },
         {
           title: "Easy Updates",
@@ -224,7 +235,7 @@ export default function FeaturesPage() {
       features: [
         {
           title: "Intelligent Workflows",
-          description: "Automate order processing, billing, inventory updates, and staff scheduling.",
+          description: "Streamline operations by automating tasks like billing, inventory, and scheduling. Reduce errors, save time, and improve productivity.",
         },
         {
           title: "Error Reduction",
@@ -239,6 +250,107 @@ export default function FeaturesPage() {
           description: "Real-time synchronization keeps every aspect of your business connected.",
         },
       ],
+    },
+  ]
+
+  const mobileApps = [
+    {
+      icon: Receipt,
+      title: "POS Billing",
+      description: "Fast and intuitive point-of-sale billing system for quick transactions.",
+    },
+    {
+      icon: Users,
+      title: "Captain App",
+      description: "Mobile app for staff to manage orders and customer interactions efficiently.",
+    },
+    {
+      icon: QRCode,
+      title: "QR Menu & Ordering",
+      description: "Digital menu system with QR code scanning for contactless ordering.",
+    },
+    {
+      icon: ShoppingCart,
+      title: "Online Ordering",
+      description: "Complete online ordering system integrated with your POS.",
+    },
+    {
+      icon: Truck,
+      title: "Food Delivery Integration",
+      description: "Seamless integration with food delivery partners for expanded reach.",
+    },
+  ]
+
+  const additionalFeatures = [
+    {
+      icon: CreditCard,
+      title: "Payment Device Integration",
+      description: "Connect with various payment devices and methods.",
+    },
+    {
+      icon: Building,
+      title: "Multi Store Management",
+      description: "Manage multiple locations from a single dashboard.",
+    },
+    {
+      icon: Shield,
+      title: "Multi Brand Management",
+      description: "Handle multiple brands under one system.",
+    },
+    {
+      icon: ChefHat,
+      title: "Kitchen Management",
+      description: "Streamlined kitchen operations and order management.",
+    },
+    {
+      icon: Monitor,
+      title: "Kitchen Display System (KDS)",
+      description: "Digital display system for kitchen staff.",
+    },
+    {
+      icon: Monitor,
+      title: "Order Display System",
+      description: "Real-time order tracking and display system.",
+    },
+    {
+      icon: Package,
+      title: "Inventory Management",
+      description: "Comprehensive inventory tracking and management.",
+    },
+    {
+      icon: BookOpen,
+      title: "Recipe Management",
+      description: "Manage recipes and ingredient requirements.",
+    },
+    {
+      icon: Heart,
+      title: "Loyalty Management",
+      description: "Customer loyalty and rewards program management.",
+    },
+    {
+      icon: Users,
+      title: "Customer Management",
+      description: "Complete customer relationship management system.",
+    },
+    {
+      icon: Truck,
+      title: "Vendor Management",
+      description: "Manage suppliers and purchase orders efficiently.",
+    },
+    {
+      icon: Printer,
+      title: "Food Label Printing",
+      description: "Print food labels and nutritional information.",
+    },
+    {
+      icon: Calculator,
+      title: "Accounting Books",
+      description: "Integrated accounting and financial management.",
+    },
+    {
+      icon: PieChart,
+      title: "Analytics App",
+      description: "Comprehensive business analytics and reporting.",
     },
   ]
 
@@ -275,8 +387,36 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* Features Overview */}
+      {/* Mobile Applications */}
       <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Five Mobile Applications</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our suite of mobile applications designed to enhance your restaurant operations and customer experience.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mobileApps.map((app, index) => (
+              <Card key={index} className="border-border hover:shadow-md transition-shadow">
+                <CardHeader className="text-center">
+                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <app.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">{app.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-center">{app.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Overview */}
+      <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Comprehensive Business Management</h2>
@@ -330,6 +470,34 @@ export default function FeaturesPage() {
               </TabsContent>
             ))}
           </Tabs>
+        </div>
+      </section>
+
+      {/* Additional Features */}
+      <section className="py-16 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Complete Feature Suite</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Every feature you need to run a successful restaurant business, all in one integrated platform.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {additionalFeatures.map((feature, index) => (
+              <Card key={index} className="border-border hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
+                    <feature.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{feature.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 

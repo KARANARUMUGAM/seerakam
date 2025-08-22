@@ -23,16 +23,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
-              Omni-Channel Sales Platform
+              Omni-Channel Sales
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Sell everywhere, <span className="text-primary">manage in one place</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Our unified platform makes it effortless to expand your business across every sales channel whether it's
-              in-store, online e-commerce, food delivery aggregators, or social commerce. With everything seamlessly
-              connected, you can manage products, inventory, pricing, promotions, and customer data from a single,
-              integrated system.
+              Expand your business across stores, e-commerce, food delivery apps, and social platforms with one unified system. Manage products, inventory, pricing, promotions, and customer data from a single dashboard. No more juggling multiple tools—everything is connected to save time and boost revenue.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
@@ -63,34 +60,17 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Unified Platform */}
-            <Card className="border-border hover:shadow-lg transition-shadow">
-              <CardHeader className="text-center">
-                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Store className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle className="text-xl">Unified Platform</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-center">
-                  Manage all your sales channels from one integrated system. Connect in-store, online, and delivery
-                  platforms seamlessly.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            {/* Simple POS */}
+            {/* Simple & User-Friendly POS */}
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
                 <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <Zap className="h-6 w-6 text-primary" />
                 </div>
-                <CardTitle className="text-xl">Simple POS</CardTitle>
+                <CardTitle className="text-xl">Simple & User-Friendly POS</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center">
-                  Fast, intuitive, and built for retail success. Your staff can get started instantly with no
-                  complicated training required.
+                  Fast, intuitive, and built for retail. Our POS makes sales, discounts, and inventory management easy. With quick billing and a clean interface, staff can start instantly—no training needed. Serve customers faster, reduce errors, and keep queues moving in any store size.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -105,8 +85,22 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center">
-                  Stay connected to your business anytime, anywhere. Online or offline, you'll always have real-time
-                  visibility into your operations.
+                  Manage your business anytime, anywhere. Track sales, inventory, suppliers, and customers from one dashboard—whether online or offline. Always stay updated with real-time visibility and full control.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            {/* Works on Any Device */}
+            <Card className="border-border hover:shadow-lg transition-shadow">
+              <CardHeader className="text-center">
+                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                  <Smartphone className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-xl">Works on Any Device</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-center">
+                  Operate seamlessly on Android, iOS, tablets, or desktops. No expensive hardware required—your data stays synced across all devices in real time.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -130,32 +124,32 @@ export default function HomePage() {
                 icon: Users,
                 title: "Customer Management",
                 description:
-                  "Build stronger relationships with detailed customer profiles and intelligent segmentation.",
+                  "Build stronger relationships with a built-in CRM. Capture customer profiles, segment groups, and create targeted promotions to improve loyalty and repeat business.",
               },
               {
                 icon: CreditCard,
-                title: "Advanced Payments",
-                description: "Accept payments across multiple channels with seamless reconciliation and security.",
+                title: "Payments",
+                description: "Accept payments across all channels—store, online, and mobile. Secure, fast, and flexible with simplified reconciliation for error-free financial management.",
               },
               {
                 icon: BarChart3,
-                title: "Real-time Analytics",
-                description: "Gain insights with instant alerts and comprehensive performance monitoring.",
+                title: "Billing",
+                description: "User-friendly POS billing for faster checkouts, fewer errors, and improved customer satisfaction. Real-time updates keep every transaction accurate.",
               },
               {
                 icon: Shield,
-                title: "Complete Traceability",
-                description: "Track every ingredient and material with barcode and QR code scanning.",
+                title: "Inventory Management",
+                description: "Track ingredients and stock in real time. Reduce waste, automate reordering, and maintain consistent supply for efficient operations and profitability.",
               },
               {
                 icon: Smartphone,
-                title: "Multi-Device Support",
-                description: "Works seamlessly across Android, iOS, tablets, and desktops.",
+                title: "Loyalty Management",
+                description: "Centralized rewards system to encourage repeat visits. Track points, manage redemptions, and deliver personalized offers that strengthen customer retention.",
               },
               {
                 icon: Zap,
-                title: "Smart Automation",
-                description: "Eliminate repetitive tasks with intelligent workflow automation.",
+                title: "Traceability",
+                description: "Track every ingredient and material with barcode/QR codes. Gain full stock visibility, simplify audits, and ensure food safety with real-time updates.",
               },
             ].map((feature, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow">
@@ -238,11 +232,9 @@ export default function HomePage() {
       {/* Support Section */}
       <section className="py-16 bg-secondary text-secondary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Expert Support Round the Clock</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">24/7 Expert Support</h2>
           <p className="text-xl text-secondary-foreground/80 mb-8 max-w-3xl mx-auto">
-            Our team of retail specialists and technical experts is available 24/7, every day of the year, to provide
-            guidance and resolve issues quickly. Whether it's troubleshooting, setup assistance, or strategic advice,
-            we're always here to support your business.
+            Get round-the-clock help from retail and tech experts. From setup to troubleshooting, we're always here to keep your business running and growing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/support">

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -8,8 +9,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="text-2xl font-bold text-primary mb-4 block">
-              Seerakam
+          <Link href="/" className="flex items-center">
+              <Image
+                src="/seerakam_logo-removebg-preview.png"
+                alt="Seerakam Logo"
+                width={150}
+                height={150}
+                priority
+              />
             </Link>
             <p className="text-secondary-foreground/80 mb-4 max-w-md">
               Empowering food entrepreneurs with structured, stress-free operations. Sell everywhere, manage in one
@@ -61,9 +68,9 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Product & Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Product</h3>
+            <h3 className="text-lg font-semibold mb-4">Product & Services</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -95,6 +102,14 @@ export function Footer() {
                   className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
                 >
                   All Features
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/pricing"
+                  className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
+                >
+                  Pricing Plans
                 </Link>
               </li>
             </ul>

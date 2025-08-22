@@ -29,9 +29,7 @@ export default function AboutPage() {
               About <span className="text-primary">Seerakam</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              At Seerakam, we believe that running a food business should be structured, stress-free, and designed for
-              growth. We're here to transform the way food entrepreneurs operate, ensuring they thrive in today's
-              fast-moving industry.
+              At Seerakam, we believe running a food business should be simple, structured, and growth-focused. From tea stalls to multi-branch hotels, we help owners overcome chaotic operations, inventory shortages, and rising pressures with one integrated platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
@@ -56,26 +54,20 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Our Journey Began with a Realization
+                More Than Just POS—It's a Complete Operations Solution
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Every day, restaurant owners, whether managing a small tea stall or a large multi-branch hotel, face the
-                challenges of chaotic operations, misplaced orders, inventory shortages, and rising operational
-                pressures. These struggles often take away from what truly matters—serving customers and growing the
-                business with confidence.
+                Seerakam is more than just POS—it's a complete operations solution for billing, inventory, loyalty, analytics, and more. By centralizing processes, we reduce errors, save time, and give entrepreneurs the clarity and control to scale with confidence.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                Our journey began with the realization that traditional systems and manual methods were not enough to
-                meet the evolving demands of the food industry. Business owners needed more than billing software. They
-                needed a dependable solution that could simplify operations, bring order to the chaos, and provide
-                real-time visibility into every aspect of their business.
+                Our platform provides structure where there was disorder, creating organized workflows and processes that help food businesses thrive in today's fast-moving industry.
               </p>
               <ul className="space-y-3">
                 {[
-                  "Recognized the gap in existing solutions",
-                  "Understood the unique challenges of food businesses",
-                  "Committed to creating a comprehensive platform",
-                  "Focused on empowering entrepreneurs with confidence",
+                  "Centralized operations management",
+                  "Reduced errors and improved accuracy",
+                  "Time-saving automation features",
+                  "Scalable solution for growth",
                 ].map((point, index) => (
                   <li key={index} className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
@@ -156,10 +148,9 @@ export default function AboutPage() {
             <Badge variant="secondary" className="mb-4 bg-secondary/10 text-secondary border-secondary/20">
               Our Impact
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Elevating Food Entrepreneurs</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Simplifying Restaurant Management</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Seerakam exists to simplify restaurant management and empower food entrepreneurs with structured,
-              stress-free operations. We believe that clarity and control are the foundation for growth.
+              We simplify restaurant management so owners can focus on serving great food and creating memorable experiences. By streamlining workflows, automating tasks, and improving accuracy, Seerakam drives efficiency, transparency, and profitability.
             </p>
           </div>
 
@@ -200,7 +191,7 @@ export default function AboutPage() {
 
           <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 md:p-12">
             <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Measurable Results</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">With Seerakam, food entrepreneurs gain the freedom to grow without chaos.</h3>
               <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
                 Our solutions go beyond promises. By streamlining workflows, reducing errors, and automating critical
                 tasks, we save valuable time and resources for food businesses of all sizes. This efficiency not only
@@ -226,8 +217,71 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Mission */}
+      {/* Leadership Team */}
       <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Leadership Team</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Meet the experienced professionals leading Seerakam's mission to transform restaurant management.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* CEO */}
+            <Card className="border-border hover:shadow-md transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Users className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-xl">CEO Selvaraj Murugaiyan</CardTitle>
+                    <CardDescription>Technology and Business Professional</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  I am a technology and business professional with over 24 years of experience, now leading Seerakam to transform restaurant management through innovation. My career began in healthcare IT, where I worked with 30+ EHR systems and 350+ healthcare organizations across the US, gaining expertise in revenue cycle management, medical billing, and operational efficiency.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  With Seerakam, I am channeling this experience into the restaurant industry—building smart solutions for billing, inventory, analytics, and customer loyalty that help entrepreneurs simplify operations and focus on growth. My vision is for Seerakam to remain at the forefront of restaurant innovation, enabling restaurants of all sizes to thrive through smart technology.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* COO */}
+            <Card className="border-border hover:shadow-md transition-shadow">
+              <CardHeader>
+                <div className="flex items-center space-x-4">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Building className="h-8 w-8 text-primary" />
+                  </div>
+                  <div>
+                    <CardTitle className="text-xl">COO – Mr. Ram</CardTitle>
+                    <CardDescription>XLRI Alumnus & IT Professional</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Mr. Ram, an alumnus of XLRI, is an accomplished IT professional with 16+ years of experience in IT infrastructure. He holds multiple global certifications including PMP, ITIL V3, ISO 27001 Lead Auditor, and IBM Advisory Project Manager. His expertise covers operations, project management, service delivery, and compliance, helping him drive both strategy and execution with excellence.
+                </p>
+                <p className="text-muted-foreground mb-4">
+                  He has led large teams and complex projects across multinational organizations, combining structured process management with practical problem-solving. Known for his people-first leadership, Mr. Ram inspires collaboration, innovation, and high performance.
+                </p>
+                <p className="text-muted-foreground">
+                  At Seerakam, he plays a key role in aligning people, processes, and technology, strengthening our commitment to innovation, efficiency, and customer success.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Mission */}
+      <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -271,7 +325,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Core Values</h2>

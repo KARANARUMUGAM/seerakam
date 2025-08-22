@@ -9,12 +9,10 @@ import Image from "next/image"
 
 const navigationItems = [
   { name: "Home", href: "/" },
-  { name: "POS", href: "/pos" },
-  { name: "Access Anywhere", href: "/access" },
-  { name: "Devices", href: "/devices" },
-  { name: "Support", href: "/support" },
-  { name: "Features", href: "/features" },
   { name: "About", href: "/about" },
+  { name: "Features", href: "/features" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Contact Us", href: "/support" },
 ]
 
 export function Navigation() {
@@ -31,8 +29,8 @@ export function Navigation() {
               <Image
                 src="/seerakam_logo-removebg-preview.png"
                 alt="Seerakam Logo"
-                width={60}
-                height={60}
+                width={150}
+                height={150}
                 priority
               />
             </Link>

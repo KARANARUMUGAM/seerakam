@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -10,16 +11,16 @@
   --card-foreground: oklch(0.2 0 0);
   --popover: oklch(0.98 0 0);
   --popover-foreground: oklch(0.2 0 0);
-  /* Updated primary color to Seerakam golden yellow #f2b64c */
-  --primary: oklch(0.75 0.15 85);
-  --primary-foreground: oklch(1 0 0);
-  /* Updated secondary color to Seerakam blue #0b6a90 */
-  --secondary: oklch(0.45 0.12 220);
+  /* Primary color: Seerakam golden yellow #f2b64c */
+  --secondary: oklch(0.75 0.15 85);
   --secondary-foreground: oklch(1 0 0);
+  /* Secondary color: Seerakam blue #0b6a90 */
+  --primary: oklch(0.45 0.12 220);
+  --primary-foreground: oklch(1 0 0);
   --muted: oklch(0.98 0 0);
   --muted-foreground: oklch(0.5 0 0);
-  /* Updated accent to use secondary blue color */
-  --accent: oklch(0.45 0.12 220);
+  /* Accent color: using primary golden yellow */
+  --accent: oklch(0.75 0.15 85);
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(1 0 0);
@@ -35,9 +36,9 @@
   --radius: 0.5rem;
   --sidebar: oklch(0.98 0 0);
   --sidebar-foreground: oklch(0.2 0 0);
-  --sidebar-primary: oklch(0.45 0.12 220);
+  --sidebar-primary: oklch(0.75 0.15 85);
   --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.75 0.15 85);
+  --sidebar-accent: oklch(0.45 0.12 220);
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.9 0 0);
   --sidebar-ring: oklch(0.75 0.15 85);
@@ -52,11 +53,11 @@
   --popover-foreground: oklch(0.95 0 0);
   --primary: oklch(0.75 0.15 85);
   --primary-foreground: oklch(0.1 0 0);
-  --secondary: oklch(0.25 0 0);
+  --secondary: oklch(0.45 0.12 220);
   --secondary-foreground: oklch(0.95 0 0);
   --muted: oklch(0.25 0 0);
   --muted-foreground: oklch(0.7 0 0);
-  --accent: oklch(0.45 0.12 220);
+  --accent: oklch(0.75 0.15 85);
   --accent-foreground: oklch(0.95 0 0);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.95 0 0);
@@ -72,7 +73,7 @@
   --sidebar-foreground: oklch(0.95 0 0);
   --sidebar-primary: oklch(0.75 0.15 85);
   --sidebar-primary-foreground: oklch(0.1 0 0);
-  --sidebar-accent: oklch(0.25 0 0);
+  --sidebar-accent: oklch(0.45 0.12 220);
   --sidebar-accent-foreground: oklch(0.95 0 0);
   --sidebar-border: oklch(0.25 0 0);
   --sidebar-ring: oklch(0.75 0.15 85);
@@ -123,9 +124,9 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Urbanist', sans-serif;
   }
   html {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Urbanist', sans-serif;
   }
 }

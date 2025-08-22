@@ -1,0 +1,183 @@
+Website Structure & Content Requirements
+Pages to Include
+        ◦ Home
+        ◦ About Us
+        ◦ Features
+        ◦ Pricing
+        ◦ Contact Us
+        ◦ Blog
+Home Page
+Include View all features page
+About Us Page
+Company details
+Employee details
+Features Page
+Should display details of:
+Features
+Five mobile Applications 
+Pricing Page
+Add pricing details.
+
+Features Page
+
+Contact Us Page
+Contact form at the top.
+FAQ section below the contact details
+
+
+Home
+
+Omni-Channel Sales
+Sell everywhere, manage in one place.
+Expand your business across stores, e-commerce, food delivery apps, and social platforms with one unified system. Manage products, inventory, pricing, promotions, and customer data from a single dashboard. No more juggling multiple tools—everything is connected to save time and boost revenue.
+Simple & User-Friendly POS
+Fast, intuitive, and built for retail. Our POS makes sales, discounts, and inventory management easy. With quick billing and a clean interface, staff can start instantly—no training needed. Serve customers faster, reduce errors, and keep queues moving in any store size.
+Access Anywhere
+Manage your business anytime, anywhere. Track sales, inventory, suppliers, and customers from one dashboard—whether online or offline. Always stay updated with real-time visibility and full control.
+Works on Any Device
+Operate seamlessly on Android, iOS, tablets, or desktops. No expensive hardware required—your data stays synced across all devices in real time.
+24/7 Expert Support
+Get round-the-clock help from retail and tech experts. From setup to troubleshooting, we’re always here to keep your business running and growing.
+
+About Seerakam
+At Seerakam, we believe running a food business should be simple, structured, and growth-focused. From tea stalls to multi-branch hotels, we help owners overcome chaotic operations, inventory shortages, and rising pressures with one integrated platform.
+Seerakam is more than just POS—it’s a complete operations solution for billing, inventory, loyalty, analytics, and more. By centralizing processes, we reduce errors, save time, and give entrepreneurs the clarity and control to scale with confidence.
+Our Impact
+We simplify restaurant management so owners can focus on serving great food and creating memorable experiences. By streamlining workflows, automating tasks, and improving accuracy, Seerakam drives efficiency, transparency, and profitability.
+With Seerakam, food entrepreneurs gain the freedom to grow without chaos.
+
+ CEO Selvaraj Murugaiyan
+I am a technology and business professional with over 24 years of experience, now leading Seerakam to transform restaurant management through innovation. My career began in healthcare IT, where I worked with 30+ EHR systems and 350+ healthcare organizations across the US, gaining expertise in revenue cycle management, medical billing, and operational efficiency.
+With Seerakam, I am channeling this experience into the restaurant industry—building smart solutions for billing, inventory, analytics, and customer loyalty that help entrepreneurs simplify operations and focus on growth. My vision is for Seerakam to remain at the forefront of restaurant innovation, enabling restaurants of all sizes to thrive through smart technology.
+
+ COO – Mr. Ram
+Mr. Ram, an alumnus of XLRI, is an accomplished IT professional with 16+ years of experience in IT infrastructure. He holds multiple global certifications including PMP, ITIL V3, ISO 27001 Lead Auditor, and IBM Advisory Project Manager. His expertise covers operations, project management, service delivery, and compliance, helping him drive both strategy and execution with excellence.
+He has led large teams and complex projects across multinational organizations, combining structured process management with practical problem-solving. Known for his people-first leadership, Mr. Ram inspires collaboration, innovation, and high performance.
+At Seerakam, he plays a key role in aligning people, processes, and technology, strengthening our commitment to innovation, efficiency, and customer success.
+
+
+
+
+
+
+ Features
+1. Customer Management
+ Build stronger relationships with a built-in CRM. Capture customer profiles, segment groups, and create targeted promotions to improve loyalty and repeat business.
+2. Payments
+ Accept payments across all channels—store, online, and mobile. Secure, fast, and flexible with simplified reconciliation for error-free financial management.
+3. Billing
+ User-friendly POS billing for faster checkouts, fewer errors, and improved customer satisfaction. Real-time updates keep every transaction accurate.
+4. Inventory Management
+ Track ingredients and stock in real time. Reduce waste, automate reordering, and maintain consistent supply for efficient operations and profitability.
+5. Loyalty Management
+ Centralized rewards system to encourage repeat visits. Track points, manage redemptions, and deliver personalized offers that strengthen customer retention.
+6. Traceability
+ Track every ingredient and material with barcode/QR codes. Gain full stock visibility, simplify audits, and ensure food safety with real-time updates.
+7. Analytics
+ Monitor sales, inventory, and performance in real time. Identify trends, optimize menus, and make data-driven decisions with instant insights.
+8. Content Management
+ Easily update menus, images, and prices across all platforms. Ensure consistency, launch promotions faster, and boost customer engagement.
+9. Automation
+ Streamline operations by automating tasks like billing, inventory, and scheduling. Reduce errors, save time, and improve productivity.
+
+
+
+Features:
+
+1. POS Billing
+2. Captain App
+3. QR Menu ord ordering
+4. Online ordering
+5. Food Delivery partner integration
+6. Payment Device Integration
+7. Multi sore management
+8. Multi brand Management
+9. Kitchen Management
+10. Kitchen Display system
+11. Order Display system.
+12. Inventory Management
+13.Recipe Management
+14. Loyalty Management
+15. Customer Management
+16. Vendor Management
+17. Food Label printing
+18. Accounting Books 
+19. Analytics App
+
+
+Pricing Page - 
+
+416/-per month outlet
+STARTER
+POS Billing & KOT Menu & Table Management Customer Managerment Inventory Mgmt (Finished + Row)
+Setup & Migration
+4,999
+
+
+708/-per month outlet
+FOUNDER TREAT
+(RECOMMENDED)
+
+POS Billing & KOT
+Menu & Table Management
+Customer Management
+Inventory Mgrit (Finished + Raw)
+Setup & Migration
+Multi-location Inventory & Reporting Vendor & Purchase Order Mgmt
+8,499/-
+
+
+
+1083/-per month outlet
+FULL COURSE
+POS Billing & KOT
+Menu & Table Management
+Customer Management
+Inventory Mgmt (Finished + Raw)
+Setup & Migration
+Multi-location Inventory & Reporting
+Vendor & Purchase Order Mgmt
+Kitchen Display System (KDS)
+Order Display System
+API Integrations & Custom Reports
+12,999/-ANNUAL
+
+Enterprise plan - 
+Customizable solution for large business
+Custom pricing 
+
+
+
+Contact Page 
+Contact form :
+Name - 
+Contact No. - 
+Mail ID - 
+
+
+FAQ
+
+How can I sign up for Seerakam Restaurant POS Software?
+To sign up for Seerakam, visit our official website and click on the "Start a Free Trial" button. Follow the registration process to create your account and begin using our Restaurant POS Software.
+
+Is there a trial period for each plan?
+Yes, we provide a trial period for each plan. This allows you to explore the features and functionalities of Seerakam Restaurant POS Software before making a commitment.
+
+What are the available plans for Seerakam?
+Seerakam offers three main plans to cater to different needs:
+STARTER
+FOUNDER TREAT
+FULL COURSE
+For details on features and capabilities, please visit our website or contact our sales team.
+
+Is Seerakam available for international customers?
+Yes, Seerakam is proud to be trusted by customers in 11 international countries. Whether you operate in different regions or have a global presence, our Restaurant POS Software is designed to meet the needs of businesses worldwide. Feel free to contact our sales team for more information on international pricing and support.
+
+Is there an enterprise plan for large businesses?
+Absolutely, we offer an enterprise plan that can be tailored to the specific requirements of large businesses. For more information on this customizable solution, please reach out to our sales team.
+
+What does "Addon" mean in the pricing structure?
+"Addon" refers to additional features or services that can be integrated into your existing plan for an extra cost. If you need extra user access or specific additional features, you can explore our addon options to enhance your experience.
+
+How do I contact customer support?
+Reach us anytime, 24/7! You can call us, email at support@seerakam.com, or use live chat on our website for quick assistance. We're here to help!

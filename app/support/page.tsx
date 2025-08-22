@@ -12,9 +12,41 @@ import {
   Headphones,
   Settings,
   TrendingUp,
+  HelpCircle,
 } from "lucide-react"
 
 export default function SupportPage() {
+  const faqs = [
+    {
+      question: "How can I sign up for Seerakam Restaurant POS Software?",
+      answer: "To sign up for Seerakam, visit our official website and click on the 'Start a Free Trial' button. Follow the registration process to create your account and begin using our Restaurant POS Software."
+    },
+    {
+      question: "Is there a trial period for each plan?",
+      answer: "Yes, we provide a trial period for each plan. This allows you to explore the features and functionalities of Seerakam Restaurant POS Software before making a commitment."
+    },
+    {
+      question: "What are the available plans for Seerakam?",
+      answer: "Seerakam offers three main plans to cater to different needs: STARTER, FOUNDER TREAT, and FULL COURSE. For details on features and capabilities, please visit our website or contact our sales team."
+    },
+    {
+      question: "Is Seerakam available for international customers?",
+      answer: "Yes, Seerakam is proud to be trusted by customers in 11 international countries. Whether you operate in different regions or have a global presence, our Restaurant POS Software is designed to meet the needs of businesses worldwide. Feel free to contact our sales team for more information on international pricing and support."
+    },
+    {
+      question: "Is there an enterprise plan for large businesses?",
+      answer: "Absolutely, we offer an enterprise plan that can be tailored to the specific requirements of large businesses. For more information on this customizable solution, please reach out to our sales team."
+    },
+    {
+      question: "What does 'Addon' mean in the pricing structure?",
+      answer: "'Addon' refers to additional features or services that can be integrated into your existing plan for an extra cost. If you need extra user access or specific additional features, you can explore our addon options to enhance your experience."
+    },
+    {
+      question: "How do I contact customer support?",
+      answer: "Reach us anytime, 24/7! You can call us, email at support@seerakam.com, or use live chat on our website for quick assistance. We're here to help!"
+    }
+  ]
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -104,8 +136,36 @@ export default function SupportPage() {
         </div>
       </section>
 
-      {/* Support Types */}
+      {/* FAQ Section */}
       <section className="py-16 bg-muted/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Find quick answers to common questions about Seerakam and our services.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <Card key={index} className="border-border hover:shadow-md transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-lg flex items-center">
+                    <HelpCircle className="h-5 w-5 text-primary mr-2 flex-shrink-0" />
+                    {faq.question}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-base">{faq.answer}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Support Types */}
+      <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -144,7 +204,7 @@ export default function SupportPage() {
       </section>
 
       {/* Support Features */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Our Support Stands Out</h2>
@@ -191,7 +251,7 @@ export default function SupportPage() {
       </section>
 
       {/* Self-Service Resources */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Self-Service Resources</h2>
@@ -238,7 +298,7 @@ export default function SupportPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
+      {/* <section className="py-20 bg-secondary text-secondary-foreground">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help? We're Here for You</h2>
           <p className="text-xl text-secondary-foreground/80 mb-8">
@@ -258,7 +318,7 @@ export default function SupportPage() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }
