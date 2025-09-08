@@ -23,13 +23,15 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
-              Omni-Channel Sales
+            Best Restaurant management software (POS)
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Sell everywhere, <span className="text-primary">manage in one place</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Expand your business across stores, e-commerce, food delivery apps, and social platforms with one unified system. Manage products, inventory, pricing, promotions, and customer data from a single dashboard. No more juggling multiple tools—everything is connected to save time and boost revenue.
+            Seerakam is a modern, cloud-based Restaurant management POS system that brings clarity and ease to the chaos of running a food business — from billing and kitchen coordination to inventory and customer management. Built for all kinds of food entrepreneurs, it offers grounded, practical solutions that solve real-world challenges in day-to-day restaurant operations.
+            Budget friendly 
+Get full access to every Seerakam feature with no hidden fees, no surprise charges, and no extra costs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
@@ -54,8 +56,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose Seerakam?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              No more juggling multiple dashboards or reconciling scattered reports. Our platform gives you one powerful
-              hub to streamline operations, reduce complexity, and unlock more revenue opportunities.
+            From small cafe in chennai to restaurant in dubai, it adapts to any kitchen without forcing you to change your workflow. It scales effortlessly from your first bill to multiple branches, offering flexible, human-centered technology that’s easy for staff to use. Seerakam brings enterprise-level tools within reach of small and mid-sized businesses. 
             </p>
           </div>
 
@@ -63,8 +64,8 @@ export default function HomePage() {
             {/* Simple & User-Friendly POS */}
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
-                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="h-6 w-6 text-primary" />
+                <div className="mx-auto w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle className="text-xl">Simple & User-Friendly POS</CardTitle>
               </CardHeader>
@@ -78,8 +79,8 @@ export default function HomePage() {
             {/* Access Anywhere */}
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
-                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Globe className="h-6 w-6 text-primary" />
+                <div className="mx-auto w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <Globe className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle className="text-xl">Access Anywhere</CardTitle>
               </CardHeader>
@@ -93,8 +94,8 @@ export default function HomePage() {
             {/* Works on Any Device */}
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
-                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                  <Smartphone className="h-6 w-6 text-primary" />
+                <div className="mx-auto w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <Smartphone className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle className="text-xl">Works on Any Device</CardTitle>
               </CardHeader>
@@ -112,9 +113,9 @@ export default function HomePage() {
       <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Complete Business Management</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Complete Restaurant management</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Everything you need to run and grow your food business, all in one powerful platform.
+            Run smarter and scale faster with every tool your food business needs together in one platform.
             </p>
           </div>
 
@@ -154,8 +155,8 @@ export default function HomePage() {
             ].map((feature, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow">
                 <CardHeader>
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
-                    <feature.icon className="h-5 w-5 text-primary" />
+                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mb-3">
+                    <feature.icon className="h-5 w-5 text-white" />
                   </div>
                   <CardTitle className="text-lg">{feature.title}</CardTitle>
                 </CardHeader>
@@ -186,21 +187,15 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge variant="secondary" className="mb-4 bg-secondary/10 text-secondary border-secondary/20">
-                Device Agnostic
-              </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Works Seamlessly Across Multiple Devices
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Our cloud-based software works effortlessly across Android, iOS, tablets, and desktops, giving retailers
-                the flexibility to operate on any device. By minimizing the need for expensive hardware, it offers a
-                truly device-agnostic solution.
+              Our cloud-based software works effortlessly across Android, iOS, tablets, and desktops, giving restaurant owners the ease to operate on any device from anywhere. By minimizing the need for expensive hardware, It works seamlessly across any device you use.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
                   "Real-time data sync across all devices",
-                  "No expensive hardware requirements",
                   "Seamless operations from anywhere",
                   "Always up-to-date information",
                 ].map((benefit, index) => (
@@ -210,11 +205,6 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <Link href="/devices">
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-                  Learn More About Device Support
-                </Button>
-              </Link>
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 text-center">
@@ -261,14 +251,14 @@ export default function HomePage() {
             Join thousands of successful restaurants and retailers who trust Seerakam to power their operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
+            <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3">
               Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+              className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 bg-transparent"
             >
               Schedule Demo
             </Button>

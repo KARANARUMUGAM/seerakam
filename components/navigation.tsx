@@ -12,6 +12,7 @@ const navigationItems = [
   { name: "About", href: "/about" },
   { name: "Features", href: "/features" },
   { name: "Pricing", href: "/pricing" },
+  { name: "Resource", href: "/resource" },
   { name: "Contact Us", href: "/support" },
 ]
 
@@ -20,9 +21,9 @@ export function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="bg-secondary text-secondary-foreground shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className="bg-secondary text-secondary-foreground shadow-sm w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">

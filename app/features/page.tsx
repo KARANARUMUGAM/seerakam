@@ -122,12 +122,12 @@ export default function FeaturesPage() {
           description: "Monitor usage patterns and gain insights into what's selling and what's not.",
         },
         {
-          title: "Waste Reduction",
-          description: "Reduce wastage and ensure supplies never run out with smart alerts.",
+          title: "Batch Management",
+          description: "From purchase to point-of-sale, track every batch and expiry date effortlessly.",
         },
         {
-          title: "Automated Reordering",
-          description: "Maintain optimal stock levels with intelligent automated reordering.",
+          title: "Stock adjustment",
+          description: "Correct errors, manage returns, and update stock counts instantly with smart adjustment",
         },
       ],
     },
@@ -149,33 +149,21 @@ export default function FeaturesPage() {
           title: "Personalized Offers",
           description: "Deliver targeted deals and incentives based on individual preferences.",
         },
-        {
-          title: "Retention Insights",
-          description: "Gain valuable insights into customer habits and engagement trends.",
-        },
       ],
     },
     {
-      id: "traceability",
-      name: "Traceability",
+      id: "table-management",
+      name: "Table Management",
       icon: QrCode,
       color: "bg-indigo-500",
       features: [
         {
-          title: "Barcode & QR Scanning",
-          description: "Track every ingredient and material with barcode/QR codes. Gain full stock visibility, simplify audits, and ensure food safety with real-time updates.",
+          title: "Table availability",
+          description: "Instantly view and manage table occupancy for faster turnarounds.",
         },
         {
-          title: "Real-time Tracking",
-          description: "Track every ingredient and material from purchase to usage in real time.",
-        },
-        {
-          title: "Audit Efficiency",
-          description: "Make audits faster, more accurate, and less labor-intensive.",
-        },
-        {
-          title: "Food Safety Standards",
-          description: "Enhance transparency and strengthen food safety compliance.",
+          title: "Reservations",
+          description: "Accept, track, and organize reservations with ease—no missed bookings",
         },
       ],
     },
@@ -360,15 +348,14 @@ export default function FeaturesPage() {
       <section className="bg-gradient-to-br from-background to-muted py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
+            {/* <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
               Complete Feature Set
-            </Badge>
+            </Badge> */}
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Everything You Need to <span className="text-primary">Run Your Business</span>
+              Everything You Need to <span className="text-primary">Run Your Hotel Business</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              From customer management to automation, Seerakam provides a comprehensive suite of features designed to
-              streamline operations, reduce complexity, and drive growth for restaurants and retail businesses.
+            From Order billing to automation, Seerakam provides a comprehensive suite of features designed to streamline operations, reduce complexity, and drive growth for restaurants and cafe businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
@@ -419,7 +406,7 @@ export default function FeaturesPage() {
       <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Comprehensive Business Management</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Comprehensive Restaurant Management</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Explore our complete feature set designed to handle every aspect of your restaurant or retail business.
             </p>
