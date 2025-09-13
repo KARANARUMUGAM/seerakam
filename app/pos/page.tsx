@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Zap, Users, CheckCircle, ArrowRight, CreditCard, BarChart3, ShoppingCart, UserCheck } from "lucide-react"
+import { ContactPopup } from "@/components/contact-popup"
 
 export default function POSPage() {
   return (

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Wifi, WifiOff, Eye, CheckCircle, ArrowRight, BarChart3, Users, Package } from "lucide-react"
+import { ContactPopup } from "@/components/contact-popup"
 
 export default function AccessPage() {
   return (
