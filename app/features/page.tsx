@@ -32,6 +32,7 @@ import {
   BookOpen,
   PieChart,
   Building,
+  Calendar,
 } from "lucide-react"
 
 export default function FeaturesPage() {
@@ -199,44 +200,36 @@ export default function FeaturesPage() {
       color: "bg-teal-500",
       features: [
         {
-          title: "Dynamic Catalog",
-          description: "Easily update menus, images, and prices across all platforms. Ensure consistency, launch promotions faster, and boost customer engagement.",
+          title: "Centralized Menu",
+          description: "Easily manage menus, pricing, and offers across all outlets with centralized control",
         },
         {
-          title: "Easy Updates",
-          description: "Add and update images, descriptions, prices, and categories effortlessly.",
+          title: "Item customization",
+          description: "Manage add-ons, combos, and item variations with ease and precision.",
         },
         {
-          title: "Multi-Channel Consistency",
-          description: "Keep offerings consistent across website, mobile app, and digital platforms.",
+          title: "Tax Management",
+          description: "Automatically apply region-specific taxes to your menu pricing.",
         },
         {
-          title: "Faster Promotions",
-          description: "Launch promotions quickly and highlight bestsellers effectively.",
+          title: "Pricing group",
+          description: "Set different pricing groups for dine-in, takeaway, and delivery with ease.",
         },
       ],
     },
     {
       id: "automation",
-      name: "Automation",
+      name: "Aggregrators",
       icon: Zap,
       color: "bg-yellow-500",
       features: [
         {
-          title: "Intelligent Workflows",
-          description: "Streamline operations by automating tasks like billing, inventory, and scheduling. Reduce errors, save time, and improve productivity.",
+          title: "Aggregators",
+          description: "Order acceptance to fulfillment, aggregator integration ensures every online transaction is synchronized with your POS, reducing manual errors",
         },
         {
-          title: "Error Reduction",
-          description: "Eliminate repetitive manual work and reduce human errors significantly.",
-        },
-        {
-          title: "Time Savings",
-          description: "Allow your team to focus on customer service instead of routine tasks.",
-        },
-        {
-          title: "Seamless Operations",
-          description: "Real-time synchronization keeps every aspect of your business connected.",
+          title: "Payments",
+          description: "UPI and credit cards to digital wallets and net banking, Seerakam connects with multiple payment providers in one system.",
         },
       ],
     },
@@ -247,26 +240,31 @@ export default function FeaturesPage() {
       icon: Receipt,
       title: "POS Billing",
       description: "Fast and intuitive point-of-sale billing system for quick transactions.",
+      logo: "/Asset 26xxxhdpi.png",
     },
     {
       icon: Users,
       title: "Captain App",
       description: "Mobile app for staff to manage orders and customer interactions efficiently.",
+      logo: "/Asset 27xxxhdpi.png",
     },
     {
-      icon: QRCode,
-      title: "QR Menu & Ordering",
-      description: "Digital menu system with QR code scanning for contactless ordering.",
+      icon: Monitor,
+      title: "KDS",
+      description: "Streamline kitchen operations with real-time order display and status updates",
+      logo: "/Asset 29xxxhdpi.png",
     },
     {
-      icon: ShoppingCart,
-      title: "Online Ordering",
-      description: "Complete online ordering system integrated with your POS.",
+      icon: Monitor,
+      title: "ODS",
+      description: "Enhance guest experience with live order status on digital screens",
+      logo: "/Asset 28xxxhdpi.png",
     },
     {
-      icon: Truck,
-      title: "Food Delivery Integration",
-      description: "Seamless integration with food delivery partners for expanded reach.",
+      icon: BarChart3,
+      title: "OWN",
+      description: "Get powerful insights and real-time reports to track sales, costs, and growth",
+      logo: "/Asset 30xxxhdpi.png",
     },
   ]
 
@@ -341,6 +339,11 @@ export default function FeaturesPage() {
       title: "Analytics App",
       description: "Comprehensive business analytics and reporting.",
     },
+    {
+      icon: Calendar,
+      title: "EVENTS",
+      description: "Manage catering and events with custom menus, advance bookings, bulk billing",
+    },
   ]
 
   return (
@@ -396,13 +399,17 @@ export default function FeaturesPage() {
               {mobileApps.slice(0, 3).map((app, index) => (
                 <Card key={index} className="border-border hover:shadow-md transition-shadow">
                   <CardHeader className="text-center">
-                    <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                      <app.icon className="h-6 w-6 text-white" />
+                    <div className="mx-auto w-[75px] h-[75px] mb-4">
+                      <img 
+                        src={app.logo} 
+                        alt={`${app.title} logo`}
+                        className="w-full h-full object-contain rounded-lg"
+                      />
                     </div>
                     <CardTitle className="text-lg">{app.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-center">{app.description}</CardDescription>
+                    <CardDescription className="text-center font-semibold">{app.description}</CardDescription>
                   </CardContent>
                 </Card>
               ))}
@@ -414,13 +421,17 @@ export default function FeaturesPage() {
                 {mobileApps.slice(3, 5).map((app, index) => (
                   <Card key={index + 3} className="border-border hover:shadow-md transition-shadow">
                     <CardHeader className="text-center">
-                      <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
-                        <app.icon className="h-6 w-6 text-white" />
+                      <div className="mx-auto w-[75px] h-[75px] mb-4">
+                        <img 
+                          src={app.logo} 
+                          alt={`${app.title} logo`}
+                          className="w-full h-full object-contain rounded-lg"
+                        />
                       </div>
                       <CardTitle className="text-lg">{app.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-center">{app.description}</CardDescription>
+                      <CardDescription className="text-center font-semibold">{app.description}</CardDescription>
                     </CardContent>
                   </Card>
                 ))}
@@ -441,16 +452,16 @@ export default function FeaturesPage() {
           </div>
 
           <Tabs defaultValue="customer" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 lg:grid-cols-5 mb-8">
+            <TabsList className="grid w-full grid-cols-3 lg:grid-cols-5 mb-8 bg-gray-100">
               {featureCategories.slice(0, 5).map((category) => (
-                <TabsTrigger key={category.id} value={category.id} className="text-xs lg:text-sm">
+                <TabsTrigger key={category.id} value={category.id} className="text-xs lg:text-sm data-[state=active]:bg-primary data-[state=active]:text-white">
                   {category.name}
                 </TabsTrigger>
               ))}
             </TabsList>
-            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8">
+            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8 bg-gray-100">
               {featureCategories.slice(5).map((category) => (
-                <TabsTrigger key={category.id} value={category.id} className="text-xs lg:text-sm">
+                <TabsTrigger key={category.id} value={category.id} className="text-xs lg:text-sm data-[state=active]:bg-primary data-[state=active]:text-white">
                   {category.name}
                 </TabsTrigger>
               ))}
