@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { ContactPopup } from "@/components/contact-popup"
 import {
   CheckCircle,
   ArrowRight,
@@ -27,7 +28,9 @@ export default function PricingPage() {
   const plans = [
     {
       name: "STARTER",
-      price: "416",
+      monthlyPrice: "416",
+      annualPrice: "6,000",
+      discountedAnnualPrice: "3,996",
       period: "per month outlet",
       description: "Perfect for small restaurants getting started",
       features: [
@@ -42,8 +45,10 @@ export default function PricingPage() {
       icon: Star,
     },
     {
-      name: "FOUNDER TREAT",
-      price: "708",
+      name: "TREAT",
+      monthlyPrice: "708",
+      annualPrice: "10,000",
+      discountedAnnualPrice: "6,797",
       period: "per month outlet",
       description: "Recommended for growing restaurants",
       features: [
@@ -61,7 +66,9 @@ export default function PricingPage() {
     },
     {
       name: "FULL COURSE",
-      price: "1083",
+      monthlyPrice: "1083",
+      annualPrice: "15,000",
+      discountedAnnualPrice: "10,397",
       period: "per month outlet",
       description: "Complete solution for established restaurants",
       features: [
@@ -119,9 +126,6 @@ export default function PricingPage() {
       <section className="bg-gradient-to-br from-background to-muted py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
-              Pricing Plans
-            </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Choose the <span className="text-primary">Perfect Plan</span> for Your Business
             </h1>
@@ -130,10 +134,14 @@ export default function PricingPage() {
               All plans include setup and migration support to get you started quickly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <ContactPopup
+                triggerText="Start Free Trial"
+                triggerVariant="default"
+                triggerSize="lg"
+                title="Start Free Trial"
+                description="Try Seerakam risk-free for 14 days. No credit card required. Experience the full power of our platform."
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
+              />
               <Button
                 size="lg"
                 variant="outline"
@@ -160,7 +168,7 @@ export default function PricingPage() {
             {plans.map((plan, index) => (
               <Card 
                 key={index} 
-                className={`border-border hover:shadow-lg transition-shadow relative ${
+                className={`border-border hover:shadow-lg transition-shadow relative flex flex-col h-full ${
                   plan.popular ? 'ring-2 ring-primary shadow-lg' : ''
                 }`}
               >
@@ -176,15 +184,26 @@ export default function PricingPage() {
                   <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
                   <CardDescription className="text-base">{plan.description}</CardDescription>
                   <div className="mt-4">
-                    <span className="text-3xl font-bold text-foreground">₹{plan.price}</span>
-                    <span className="text-muted-foreground">/{plan.period}</span>
+                    <div className="flex flex-col items-center space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <span className="text-2xl font-bold text-muted-foreground line-through">₹{plan.annualPrice}</span>
+                        <span className="text-sm text-muted-foreground">/year</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-3xl font-bold text-foreground">₹{plan.monthlyPrice}</span>
+                        <span className="text-muted-foreground">/{plan.period}</span>
+                      </div>
+                      <div className="text-sm text-primary font-semibold">
+                        Save 20% with Annual Plan
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-sm text-muted-foreground">
-                    Setup & Migration: ₹{plan.setupPrice}
+                  <div className="text-lg font-semibold text-muted-foreground">
+                    Setup & Migration: ₹{plan.setupPrice} per annum/outlet
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 mb-6">
+                <CardContent className="flex flex-col flex-grow">
+                  <ul className="space-y-3 mb-6 flex-grow">
                     {plan.features.map((feature, featureIndex) => {
                       const IconComponent = featureIcons[feature as keyof typeof featureIcons] || CheckCircle
                       return (
@@ -196,7 +215,7 @@ export default function PricingPage() {
                     })}
                   </ul>
                   <Button 
-                    className={`w-full ${plan.popular ? 'bg-primary text-primary-foreground hover:bg-primary/90' : 'bg-secondary text-secondary-foreground hover:bg-secondary/90'}`}
+                    className={`w-full mt-auto ${plan.popular ? 'bg-primary text-primary-foreground hover:bg-primary/90' : 'bg-secondary text-secondary-foreground hover:bg-secondary/90'}`}
                   >
                     Choose {plan.name}
                   </Button>
@@ -222,10 +241,14 @@ export default function PricingPage() {
                   For large businesses with complex requirements, we offer custom solutions tailored to your specific needs. 
                   Get in touch with our sales team to discuss your requirements and receive a personalized quote.
                 </p>
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                  Contact Sales Team
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <ContactPopup 
+                  triggerText="Contact Sales Team"
+                  triggerVariant="default"
+                  triggerSize="lg"
+                  title="Contact Sales Team"
+                  description="Get in touch with our sales team to discuss your enterprise requirements and receive a personalized quote."
+                  className="bg-primary text-primary-foreground hover:bg-primary/90"
+                />
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-foreground mb-4">Enterprise Features Include:</h4>
@@ -293,17 +316,22 @@ export default function PricingPage() {
             Choose the plan that fits your business and start transforming your restaurant operations today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
-              Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
+            <ContactPopup
+              triggerText="Start Free Trial"
+              triggerVariant="default"
+              triggerSize="lg"
+              title="Start Free Trial"
+              description="Try Seerakam risk-free for 14 days. No credit card required. Experience the full power of our platform."
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
+            />
+            <ContactPopup 
+              triggerText="Schedule Demo"
+              triggerVariant="outline"
+              triggerSize="lg"
+              title="Schedule a Demo"
+              description="Book a personalized demo to see how Seerakam can transform your restaurant operations."
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
-            >
-              Schedule Demo
-            </Button>
+            />
           </div>
         </div>
       </section>

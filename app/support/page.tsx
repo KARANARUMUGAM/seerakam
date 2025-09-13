@@ -27,7 +27,7 @@ export default function SupportPage() {
     },
     {
       question: "What are the available plans for Seerakam?",
-      answer: "Seerakam offers three main plans to cater to different needs: STARTER, FOUNDER TREAT, and FULL COURSE. For details on features and capabilities, please visit our website or contact our sales team."
+      answer: "Seerakam offers three main plans to cater to different needs: STARTER, TREAT, and FULL COURSE. For details on features and capabilities, please visit our website or contact our sales team."
     },
     {
       question: "Is Seerakam available for international customers?",
@@ -53,14 +53,11 @@ export default function SupportPage() {
       <section className="bg-gradient-to-br from-background to-muted py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
-              24/7 Support
-            </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Expert Support <span className="text-primary">Round the Clock</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Our team of retail specialists and technical experts is available 24/7, every day of the year, to provide
+              Our team of product specialists and technical experts is available 24/7, every day of the year, to provide
               guidance and resolve issues quickly. Whether it's troubleshooting, setup assistance, or strategic advice,
               we're always here to support your business and help accelerate growth.
             </p>
@@ -118,11 +115,11 @@ export default function SupportPage() {
             ].map((channel, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow">
                 <CardHeader className="text-center">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <channel.icon className="h-6 w-6 text-primary" />
+                  <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <channel.icon className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-xl">{channel.title}</CardTitle>
-                  <CardDescription>{channel.description}</CardDescription>
+                  <CardDescription className="font-semibold">{channel.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-sm text-muted-foreground mb-2">{channel.details}</p>
@@ -156,7 +153,7 @@ export default function SupportPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">{faq.answer}</CardDescription>
+                  <CardDescription className="text-base font-semibold">{faq.answer}</CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -178,10 +175,8 @@ export default function SupportPage() {
                 {[
                   "Technical troubleshooting and bug fixes",
                   "Setup assistance and onboarding",
-                  "Strategic business advice and consultation",
                   "Training for you and your staff",
                   "Integration support with third-party services",
-                  "Performance optimization recommendations",
                 ].map((service, index) => (
                   <li key={index} className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-primary mr-3 flex-shrink-0" />
@@ -213,36 +208,30 @@ export default function SupportPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
                 icon: Users,
-                title: "Retail Specialists",
+                title: "Product Specialists",
                 description:
-                  "Our team understands the unique challenges of restaurant and retail businesses, providing industry-specific solutions.",
+                  "Our team understands the unique challenges of restaurant and cafe businesses, providing industry-specific solutions.",
               },
               {
                 icon: Settings,
                 title: "Technical Experts",
                 description:
                   "Certified technical professionals who know our platform inside and out, ensuring quick problem resolution.",
-              },
-              {
-                icon: TrendingUp,
-                title: "Growth Partners",
-                description:
-                  "We don't just provide support – we help you optimize operations and identify opportunities for growth.",
-              },
+              }
             ].map((feature, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow">
                 <CardHeader className="text-center">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="h-6 w-6 text-primary" />
+                  <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-center">{feature.description}</CardDescription>
+                  <CardDescription className="text-center font-semibold">{feature.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -277,11 +266,11 @@ export default function SupportPage() {
             ].map((resource, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow">
                 <CardHeader className="text-center">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <resource.icon className="h-6 w-6 text-primary" />
+                  <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <resource.icon className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-xl">{resource.title}</CardTitle>
-                  <CardDescription>{resource.description}</CardDescription>
+                  <CardDescription className="font-semibold">{resource.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
                   <Button

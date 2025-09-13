@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { PageLoader } from "@/components/page-loader"
 
 export const metadata: Metadata = {
   title: "Seerakam - Omni-Channel Sales Platform",
@@ -32,6 +33,7 @@ html {
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        <PageLoader />
       </body>
     </html>
   )

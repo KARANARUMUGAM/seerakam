@@ -144,10 +144,14 @@ export default function AccessPage() {
             Experience the freedom of managing your business remotely with complete visibility and control.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
-              Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <ContactPopup
+              triggerText="Start Free Trial"
+              triggerVariant="default"
+              triggerSize="lg"
+              title="Start Free Trial"
+              description="Try Seerakam risk-free for 14 days. No credit card required. Experience the full power of our platform."
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
+            />
             <Button
               size="lg"
               variant="outline"

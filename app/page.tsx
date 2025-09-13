@@ -12,7 +12,9 @@ import {
   Zap,
   CheckCircle,
   ArrowRight,
+  Table,
 } from "lucide-react"
+import { ContactPopup } from "@/components/contact-popup"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -22,11 +24,11 @@ export default function HomePage() {
       <section className="bg-gradient-to-br from-background to-muted py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
-            Best Restaurant management software (POS)
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Sell everywhere, <span className="text-primary">manage in one place</span>
+            <p className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-primary">
+            Best Restaurant management software - POS
+            </p>
+            <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
+              Sell everywhere, <span className="text-black">manage in one place</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
             Seerakam is a modern, cloud-based Restaurant management POS system that brings clarity and ease to the chaos of running a food business — from billing and kitchen coordination to inventory and customer management. Built for all kinds of food entrepreneurs, it offers grounded, practical solutions that solve real-world challenges in day-to-day restaurant operations.
@@ -34,17 +36,22 @@ export default function HomePage() {
 Get full access to every Seerakam feature with no hidden fees, no surprise charges, and no extra costs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
+              <ContactPopup
+                triggerText="Get Started"
+                triggerVariant="default"
+                triggerSize="lg"
+                title="Get Started"
+                description="Ready to start your journey with Seerakam? Fill out the form below and we'll get you set up."
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
+              />
+              <ContactPopup
+                triggerText="Book a Demo"
+                triggerVariant="outline"
+                triggerSize="lg"
+                title="Book a Demo"
+                description="Schedule a personalized demo to see how Seerakam can transform your restaurant operations."
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
-              >
-                Book a Demo
-              </Button>
+              />
             </div>
           </div>
         </div>
@@ -54,8 +61,8 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose Seerakam?</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">Why Choose Seerakam?</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto ">
             From small cafe in chennai to restaurant in dubai, it adapts to any kitchen without forcing you to change your workflow. It scales effortlessly from your first bill to multiple branches, offering flexible, human-centered technology that’s easy for staff to use. Seerakam brings enterprise-level tools within reach of small and mid-sized businesses. 
             </p>
           </div>
@@ -64,13 +71,13 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
             {/* Simple & User-Friendly POS */}
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
-                <div className="mx-auto w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
                   <Zap className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle className="text-xl">Simple & User-Friendly POS</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-center">
+                <CardDescription className="text-center font-semibold">
                   Fast, intuitive, and built for retail. Our POS makes sales, discounts, and inventory management easy. With quick billing and a clean interface, staff can start instantly—no training needed. Serve customers faster, reduce errors, and keep queues moving in any store size.
                 </CardDescription>
               </CardContent>
@@ -79,13 +86,13 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
             {/* Access Anywhere */}
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
-                <div className="mx-auto w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
                   <Globe className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle className="text-xl">Access Anywhere</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-center">
+                <CardDescription className="text-center font-semibold">
                   Manage your business anytime, anywhere. Track sales, inventory, suppliers, and customers from one dashboard—whether online or offline. Always stay updated with real-time visibility and full control.
                 </CardDescription>
               </CardContent>
@@ -94,13 +101,13 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
             {/* Works on Any Device */}
             <Card className="border-border hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
-                <div className="mx-auto w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
                   <Smartphone className="h-6 w-6 text-white" />
                 </div>
                 <CardTitle className="text-xl">Works on Any Device</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-center">
+                <CardDescription className="text-center font-semibold">
                   Operate seamlessly on Android, iOS, tablets, or desktops. No expensive hardware required—your data stays synced across all devices in real time.
                 </CardDescription>
               </CardContent>
@@ -122,6 +129,21 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
+                icon: BarChart3,
+                title: "Billing",
+                description: "User-friendly POS billing for faster checkouts, fewer errors, and improved customer satisfaction. Real-time updates keep every transaction accurate.",
+              },
+              {
+                icon: Table,
+                title: "Table Management",
+                description: "Efficiently manage restaurant tables, track occupancy, and optimize seating arrangements for better customer flow and increased revenue.",
+              },
+              {
+                icon: Shield,
+                title: "Inventory Management",
+                description: "Track ingredients and stock in real time. Reduce waste, automate reordering, and maintain consistent supply for efficient operations and profitability.",
+              },
+              {
                 icon: Users,
                 title: "Customer Management",
                 description:
@@ -133,35 +155,20 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
                 description: "Accept payments across all channels—store, online, and mobile. Secure, fast, and flexible with simplified reconciliation for error-free financial management.",
               },
               {
-                icon: BarChart3,
-                title: "Billing",
-                description: "User-friendly POS billing for faster checkouts, fewer errors, and improved customer satisfaction. Real-time updates keep every transaction accurate.",
-              },
-              {
-                icon: Shield,
-                title: "Inventory Management",
-                description: "Track ingredients and stock in real time. Reduce waste, automate reordering, and maintain consistent supply for efficient operations and profitability.",
-              },
-              {
                 icon: Smartphone,
                 title: "Loyalty Management",
                 description: "Centralized rewards system to encourage repeat visits. Track points, manage redemptions, and deliver personalized offers that strengthen customer retention.",
               },
-              {
-                icon: Zap,
-                title: "Traceability",
-                description: "Track every ingredient and material with barcode/QR codes. Gain full stock visibility, simplify audits, and ensure food safety with real-time updates.",
-              },
             ].map((feature, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow">
                 <CardHeader>
-                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mb-3">
+                  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-3">
                     <feature.icon className="h-5 w-5 text-white" />
                   </div>
                   <CardTitle className="text-lg">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription>{feature.description}</CardDescription>
+                  <CardDescription className="font-semibold">{feature.description}</CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -248,20 +255,25 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Join thousands of successful restaurants and retailers who trust Seerakam to power their operations.
+            Join thousands of successful restaurants and owners who trust Seerakam to power their operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 px-8 py-3">
-              Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 bg-transparent"
-            >
-              Schedule Demo
-            </Button>
+            <ContactPopup
+              triggerText="Start Free Trial"
+              triggerVariant="default"
+              triggerSize="lg"
+              title="Start Free Trial"
+              description="Try Seerakam risk-free for 14 days. No credit card required. Experience the full power of our platform."
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
+            />
+            <ContactPopup
+              triggerText="Schedule Demo"
+              triggerVariant="outline"
+              triggerSize="lg"
+              title="Schedule Demo"
+              description="Book a personalized demo with our team to see how Seerakam can transform your restaurant operations."
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+            />
           </div>
         </div>
       </section>

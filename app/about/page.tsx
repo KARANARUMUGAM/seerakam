@@ -22,9 +22,6 @@ export default function AboutPage() {
       <section className="bg-gradient-to-br from-background to-muted py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
-              Our Story
-            </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               About <span className="text-primary">Seerakam</span>
             </h1>
@@ -126,8 +123,8 @@ export default function AboutPage() {
                   { icon: TrendingUp, title: "Growth Enabler", desc: "Scales with your business needs" },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                      <item.icon className="h-4 w-4 text-primary" />
+                    <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                      <item.icon className="h-4 w-4 text-white" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-foreground">{item.title}</h4>
@@ -145,9 +142,6 @@ export default function AboutPage() {
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <Badge variant="secondary" className="mb-4 bg-secondary/10 text-secondary border-secondary/20">
-              Our Impact
-            </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Simplifying Restaurant Management</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               We simplify restaurant management so owners can focus on serving great food and creating memorable experiences. By streamlining workflows, automating tasks, and improving accuracy, Seerakam drives efficiency, transparency, and profitability.
@@ -177,8 +171,8 @@ export default function AboutPage() {
             ].map((impact, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow text-center">
                 <CardHeader>
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <impact.icon className="h-6 w-6 text-primary" />
+                  <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <impact.icon className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-xl">{impact.title}</CardTitle>
                 </CardHeader>
@@ -204,8 +198,8 @@ export default function AboutPage() {
                   { metric: "Stronger Profitability", desc: "Reduced waste and improved efficiency" },
                 ].map((result, index) => (
                   <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Award className="h-8 w-8 text-primary" />
+                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-3">
+                      <Award className="h-8 w-8 text-white" />
                     </div>
                     <h4 className="font-semibold text-foreground mb-2">{result.metric}</h4>
                     <p className="text-sm text-muted-foreground">{result.desc}</p>
@@ -232,8 +226,8 @@ export default function AboutPage() {
             <Card className="border-border hover:shadow-md transition-shadow">
               <CardHeader>
                 <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Users className="h-8 w-8 text-primary" />
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                    <Users className="h-8 w-8 text-white" />
                   </div>
                   <div>
                     <CardTitle className="text-xl">CEO Selvaraj Murugaiyan</CardTitle>
@@ -255,8 +249,8 @@ export default function AboutPage() {
             <Card className="border-border hover:shadow-md transition-shadow">
               <CardHeader>
                 <div className="flex items-center space-x-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Building className="h-8 w-8 text-primary" />
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+                    <Building className="h-8 w-8 text-white" />
                   </div>
                   <div>
                     <CardTitle className="text-xl">COO – Mr. Ram</CardTitle>
@@ -359,8 +353,8 @@ export default function AboutPage() {
             ].map((value, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow text-center">
                 <CardHeader>
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <value.icon className="h-6 w-6 text-primary" />
+                  <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <value.icon className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-lg">{value.title}</CardTitle>
                 </CardHeader>

@@ -193,7 +193,7 @@ export default function FeaturesPage() {
     },
     {
       id: "content",
-      name: "Content Management",
+      name: "Menu Management",
       icon: FileText,
       color: "bg-teal-500",
       features: [
@@ -358,17 +358,22 @@ export default function FeaturesPage() {
             From Order billing to automation, Seerakam provides a comprehensive suite of features designed to streamline operations, reduce complexity, and drive growth for restaurants and cafe businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
+              <ContactPopup
+                triggerText="Start Free Trial"
+                triggerVariant="default"
+                triggerSize="lg"
+                title="Start Free Trial"
+                description="Try Seerakam risk-free for 14 days. No credit card required. Experience the full power of our platform."
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
+              />
+              <ContactPopup
+                triggerText="Schedule Demo"
+                triggerVariant="outline"
+                triggerSize="lg"
+                title="Schedule Demo"
+                description="Book a personalized demo with our team to see how Seerakam can transform your restaurant operations."
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
-              >
-                Schedule Demo
-              </Button>
+              />
             </div>
           </div>
         </div>
@@ -384,20 +389,42 @@ export default function FeaturesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {mobileApps.map((app, index) => (
-              <Card key={index} className="border-border hover:shadow-md transition-shadow">
-                <CardHeader className="text-center">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <app.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg">{app.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-center">{app.description}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="space-y-8">
+            {/* First row - 3 applications */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {mobileApps.slice(0, 3).map((app, index) => (
+                <Card key={index} className="border-border hover:shadow-md transition-shadow">
+                  <CardHeader className="text-center">
+                    <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                      <app.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <CardTitle className="text-lg">{app.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-center">{app.description}</CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            
+            {/* Second row - 2 applications centered */}
+            <div className="flex justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+                {mobileApps.slice(3, 5).map((app, index) => (
+                  <Card key={index + 3} className="border-border hover:shadow-md transition-shadow">
+                    <CardHeader className="text-center">
+                      <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                        <app.icon className="h-6 w-6 text-white" />
+                      </div>
+                      <CardTitle className="text-lg">{app.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-center">{app.description}</CardDescription>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -474,8 +501,8 @@ export default function FeaturesPage() {
             {additionalFeatures.map((feature, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow">
                 <CardHeader>
-                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
-                    <feature.icon className="h-5 w-5 text-primary" />
+                  <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-3">
+                    <feature.icon className="h-5 w-5 text-white" />
                   </div>
                   <CardTitle className="text-lg">{feature.title}</CardTitle>
                 </CardHeader>
@@ -523,8 +550,8 @@ export default function FeaturesPage() {
             ].map((benefit, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow text-center">
                 <CardHeader>
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <benefit.icon className="h-6 w-6 text-primary" />
+                  <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <benefit.icon className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-lg">{benefit.title}</CardTitle>
                 </CardHeader>
@@ -543,7 +570,7 @@ export default function FeaturesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                One Platform, Endless Possibilities
+                Balanced Tech Effortless Operation
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
                 Instead of juggling multiple systems, Seerakam brings everything together in one powerful platform that
@@ -608,8 +635,8 @@ export default function FeaturesPage() {
             ].map((feature, index) => (
               <Card key={index} className="border-border hover:shadow-md transition-shadow">
                 <CardHeader className="text-center">
-                  <div className="mx-auto w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                    <feature.icon className="h-6 w-6 text-primary" />
+                  <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-xl">{feature.title}</CardTitle>
                 </CardHeader>
@@ -630,10 +657,14 @@ export default function FeaturesPage() {
             See how Seerakam's comprehensive feature set can transform your business operations and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
-              Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <ContactPopup
+              triggerText="Start Free Trial"
+              triggerVariant="default"
+              triggerSize="lg"
+              title="Start Free Trial"
+              description="Try Seerakam risk-free for 14 days. No credit card required. Experience the full power of our platform."
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
+            />
             <Button
               size="lg"
               variant="outline"

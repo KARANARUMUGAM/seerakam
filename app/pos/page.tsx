@@ -144,17 +144,22 @@ export default function POSPage() {
             Experience the power of our user-friendly POS system and see how it can transform your business operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
-              Start Free Trial
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
+            <ContactPopup
+              triggerText="Start Free Trial"
+              triggerVariant="default"
+              triggerSize="lg"
+              title="Start Free Trial"
+              description="Try Seerakam risk-free for 14 days. No credit card required. Experience the full power of our platform."
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
+            />
+            <ContactPopup
+              triggerText="Schedule Demo"
+              triggerVariant="outline"
+              triggerSize="lg"
+              title="Schedule Demo"
+              description="Book a personalized demo with our team to see how Seerakam can transform your restaurant operations."
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
-            >
-              Schedule Demo
-            </Button>
+            />
           </div>
         </div>
       </section>
