@@ -21,16 +21,25 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-background to-muted py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-background to-muted h-screen overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/banner-home.png"
+            alt="Restaurant POS System"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/50 to-black/50"></div>
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center">
           <div className="text-center">
             <p className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-primary">
             Best Restaurant management software - POS
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
-              Sell everywhere, <span className="text-black">manage in one place</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Sell everywhere, <span className="text-white">manage in one place</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
             Seerakam is a modern, cloud-based Restaurant management POS system that brings clarity and ease to the chaos of running a food business — from billing and kitchen coordination to inventory and customer management. Built for all kinds of food entrepreneurs, it offers grounded, practical solutions that solve real-world challenges in day-to-day restaurant operations.
             Budget friendly 
 Get full access to every Seerakam feature with no hidden fees, no surprise charges, and no extra costs
@@ -46,11 +55,11 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
               />
               <ContactPopup
                 triggerText="Book a Demo"
-                triggerVariant="outline"
+                triggerVariant="default"
                 triggerSize="lg"
                 title="Book a Demo"
                 description="Schedule a personalized demo to see how Seerakam can transform your restaurant operations."
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
               />
             </div>
           </div>
@@ -104,11 +113,11 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
                 <div className="mx-auto w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
                   <Smartphone className="h-6 w-6 text-white" />
                 </div>
-                <CardTitle className="text-xl">Works on Any Device</CardTitle>
+                <CardTitle className="text-xl">Budget friendly </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center font-semibold">
-                  Operate seamlessly on Android, iOS, tablets, or desktops. No expensive hardware required—your data stays synced across all devices in real time.
+                Get full access to every Seerakam feature with no hidden fees, no surprise charges, and no extra cost.
                 </CardDescription>
               </CardContent>
             </Card>
@@ -177,9 +186,9 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
           <div className="text-center mt-12">
             <Link href="/features">
               <Button
-                variant="outline"
+                variant="default"
                 size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
               >
                 View All Features
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -216,7 +225,7 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
             <div className="relative">
               <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8 text-center">
                 <img
-                  src="/4403.jpg?height=300&width=400"
+                  src="/home-2.jpg?height=300&width=400"
                   alt="Multiple devices showing Seerakam POS interface"
                   className="mx-auto rounded-lg shadow-lg"
                 />
@@ -227,7 +236,7 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
       </section>
 
       {/* Support Section */}
-      <section className="py-16 bg-secondary text-secondary-foreground">
+      <section className="py-16 bg-primary text-secondary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">24/7 Expert Support</h2>
           <p className="text-xl text-secondary-foreground/80 mb-8 max-w-3xl mx-auto">
@@ -235,14 +244,14 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/support">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3">
+              <Button size="lg" className="bg-secondary text-primary-foreground hover:bg-primary/90 px-8 py-3">
                 Get Support Now
               </Button>
             </Link>
             <Button
               size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent px-8 py-3"
+              variant="default"
+              className="bg-secondary text-primary-foreground hover:bg-primary/90 px-8 py-3"
             >
               Contact Sales
             </Button>
@@ -268,11 +277,11 @@ Get full access to every Seerakam feature with no hidden fees, no surprise charg
             />
             <ContactPopup
               triggerText="Schedule Demo"
-              triggerVariant="outline"
+              triggerVariant="default"
               triggerSize="lg"
               title="Schedule Demo"
               description="Book a personalized demo with our team to see how Seerakam can transform your restaurant operations."
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
             />
           </div>
         </div>

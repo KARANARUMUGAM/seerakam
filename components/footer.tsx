@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { ContactPopup } from "@/components/contact-popup"
+import { Copyright } from "@/components/copyright"
 
 export function Footer() {
   return (
@@ -19,7 +20,7 @@ export function Footer() {
                 priority
               />
             </Link>
-            <p className="text-black/80 mb-4 max-w-md text-base font-medium">
+            <p className="text-black/80 mb-4 max-w-md text-base font-medium mt-4">
               Empowering food entrepreneurs with structured, stress-free operations. Sell everywhere, manage in one
               place.
             </p>
@@ -224,12 +225,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-black/20 mt-8 pt-8 text-center">
-          <p className="text-black/60 text-base font-medium">
-            © 2025 Seerakam Technologies Private Limited. All rights reserved.
-          </p>
-        </div>
       </div>
+      <Copyright />
     </footer>
   )
 }

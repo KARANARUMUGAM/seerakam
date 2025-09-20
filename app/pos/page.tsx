@@ -29,8 +29,8 @@ export default function POSPage() {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+                variant="default"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
               >
                 Watch Video
               </Button>
@@ -159,7 +159,7 @@ export default function POSPage() {
               triggerSize="lg"
               title="Schedule Demo"
               description="Book a personalized demo with our team to see how Seerakam can transform your restaurant operations."
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
             />
           </div>
         </div>

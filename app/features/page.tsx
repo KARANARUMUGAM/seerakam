@@ -238,7 +238,7 @@ export default function FeaturesPage() {
   const mobileApps = [
     {
       icon: Receipt,
-      title: "POS Billing",
+      title: "Point of Sale",
       description: "Fast and intuitive point-of-sale billing system for quick transactions.",
       logo: "/Asset 26xxxhdpi.png",
     },
@@ -250,19 +250,19 @@ export default function FeaturesPage() {
     },
     {
       icon: Monitor,
-      title: "KDS",
+      title: "Kitchen Display System",
       description: "Streamline kitchen operations with real-time order display and status updates",
       logo: "/Asset 29xxxhdpi.png",
     },
     {
       icon: Monitor,
-      title: "ODS",
+      title: "Order Display System",
       description: "Enhance guest experience with live order status on digital screens",
       logo: "/Asset 28xxxhdpi.png",
     },
     {
       icon: BarChart3,
-      title: "OWN",
+      title: "Owner Analytics",
       description: "Get powerful insights and real-time reports to track sales, costs, and growth",
       logo: "/Asset 30xxxhdpi.png",
     },
@@ -349,16 +349,25 @@ export default function FeaturesPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-background to-muted py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-background to-muted h-screen overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/banner-feature.png"
+            alt="Hotel Management Features"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/50 to-black/50"></div>
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center">
           <div className="text-center">
             {/* <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
               Complete Feature Set
             </Badge> */}
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Everything You Need to <span className="text-primary">Run Your Hotel Business</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
             From Order billing to automation, Seerakam provides a comprehensive suite of features designed to streamline operations, reduce complexity, and drive growth for restaurants and cafe businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -447,25 +456,20 @@ export default function FeaturesPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Comprehensive Restaurant Management</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our complete feature set designed to handle every aspect of your restaurant or retail business.
+              Explore our complete feature set designed to handle every aspect of your restaurant or cafe business.
             </p>
           </div>
 
           <Tabs defaultValue="customer" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 lg:grid-cols-5 mb-8 bg-gray-100">
-              {featureCategories.slice(0, 5).map((category) => (
-                <TabsTrigger key={category.id} value={category.id} className="text-xs lg:text-sm data-[state=active]:bg-primary data-[state=active]:text-white">
-                  {category.name}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8 bg-gray-100">
-              {featureCategories.slice(5).map((category) => (
-                <TabsTrigger key={category.id} value={category.id} className="text-xs lg:text-sm data-[state=active]:bg-primary data-[state=active]:text-white">
-                  {category.name}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+            <div className="overflow-x-auto mb-8">
+              <TabsList className="inline-flex w-max min-w-full bg-gray-100">
+                {featureCategories.map((category) => (
+                  <TabsTrigger key={category.id} value={category.id} className="text-xs sm:text-sm whitespace-nowrap px-3 sm:px-4 data-[state=active]:bg-primary data-[state=active]:text-white">
+                    {category.name}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
 
             {featureCategories.map((category) => (
               <TabsContent key={category.id} value={category.id} className="space-y-6">
@@ -607,7 +611,7 @@ export default function FeaturesPage() {
             <div className="relative">
               <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8">
                 <img
-                  src="/feature.jpg?height=400&width=500"
+                  src="/feature1.jpg?height=400&width=500"
                   alt="Seerakam unified platform dashboard"
                   className="mx-auto rounded-lg shadow-lg"
                 />
@@ -662,10 +666,10 @@ export default function FeaturesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary text-secondary-foreground">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 bg-primary text-secondary-foreground">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Experience All Features?</h2>
-          <p className="text-xl text-secondary-foreground/80 mb-8">
+          <p className="text-xl text-secondary-foreground/80 mb-8 max-w-3xl mx-auto">
             See how Seerakam's comprehensive feature set can transform your business operations and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -675,12 +679,12 @@ export default function FeaturesPage() {
               triggerSize="lg"
               title="Start Free Trial"
               description="Try Seerakam risk-free for 14 days. No credit card required. Experience the full power of our platform."
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
+              className="bg-secondary text-primary-foreground hover:bg-primary/90 px-8 py-3"
             />
             <Button
               size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+              variant="default"
+              className="bg-secondary text-primary-foreground hover:bg-primary/90 px-8 py-3"
             >
               Book Personalized Demo
             </Button>

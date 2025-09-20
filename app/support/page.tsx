@@ -50,13 +50,22 @@ export default function SupportPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-background to-muted py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gradient-to-br from-background to-muted h-screen overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/banner-contact.png"
+            alt="Customer Support Representative"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/50 to-black/50"></div>
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Expert Support <span className="text-primary">Round the Clock</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
               Our team of product specialists and technical experts is available 24/7, every day of the year, to provide
               guidance and resolve issues quickly. Whether it's troubleshooting, setup assistance, or strategic advice,
               we're always here to support your business and help accelerate growth.
@@ -68,8 +77,8 @@ export default function SupportPage() {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+                variant="default"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
               >
                 Contact Sales
               </Button>
@@ -188,7 +197,7 @@ export default function SupportPage() {
             <div className="relative">
               <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-8">
                 <img
-                  src="/support.jpg?height=400&width=500"
+                  src="/contact1.jpg?height=400&width=500"
                   alt="Seerakam support team providing assistance"
                   className="mx-auto rounded-lg shadow-lg"
                 />
@@ -274,8 +283,8 @@ export default function SupportPage() {
                 </CardHeader>
                 <CardContent className="text-center">
                   <Button
-                    variant="outline"
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground bg-transparent"
+                    variant="default"
+                    className="bg-primary text-primary-foreground hover:bg-primary/90"
                   >
                     Explore Resources
                   </Button>
@@ -300,8 +309,8 @@ export default function SupportPage() {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+              variant="default"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
             >
               Browse Help Center
             </Button>

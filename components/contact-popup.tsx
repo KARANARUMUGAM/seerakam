@@ -29,6 +29,7 @@ export function ContactPopup({
 }: ContactPopupProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [errors, setErrors] = useState<{[key: string]: string}>({})
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -38,12 +39,71 @@ export function ContactPopup({
     message: ""
   })
 
+  // Validation functions
+  const validatePhone = (phone: string): string => {
+    const phoneDigits = phone.replace(/\D/g, '')
+    if (phoneDigits.length === 0) return "Phone number is required"
+    if (phoneDigits.length !== 10) return "Phone number must be exactly 10 digits"
+    return ""
+  }
+
+  const validateEmail = (email: string): string => {
+    if (!email) return "Email is required"
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) return "Please enter a valid email address"
+    return ""
+  }
+
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
+    // Special handling for phone number - only allow digits and limit to 10
+    if (field === 'phone') {
+      const phoneDigits = value.replace(/\D/g, '').slice(0, 10)
+      setFormData(prev => ({ ...prev, [field]: phoneDigits }))
+      
+      // Clear error when user starts typing
+      if (errors.phone) {
+        setErrors(prev => ({ ...prev, phone: "" }))
+      }
+    } else {
+      setFormData(prev => ({ ...prev, [field]: value }))
+      
+      // Clear error when user starts typing
+      if (errors[field]) {
+        setErrors(prev => ({ ...prev, [field]: "" }))
+      }
+    }
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Validate form fields
+    const newErrors: {[key: string]: string} = {}
+    
+    // Validate required fields
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required"
+    }
+    
+    const emailError = validateEmail(formData.email)
+    if (emailError) {
+      newErrors.email = emailError
+    }
+    
+    const phoneError = validatePhone(formData.phone)
+    if (phoneError) {
+      newErrors.phone = phoneError
+    }
+    
+    // If there are errors, don't submit
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors)
+      return
+    }
+    
+    // Clear any existing errors
+    setErrors({})
+    
     // Handle form submission here
     console.log("Form submitted:", formData)
     setIsSubmitted(true)
@@ -60,6 +120,7 @@ export function ContactPopup({
         plan: "",
         message: ""
       })
+      setErrors({})
     }, 3000)
   }
 
@@ -74,6 +135,7 @@ export function ContactPopup({
       plan: "",
       message: ""
     })
+    setErrors({})
   }
 
   return (
@@ -118,8 +180,12 @@ export function ContactPopup({
                   placeholder="Enter your full name"
                   value={formData.name}
                   onChange={(e) => handleInputChange("name", e.target.value)}
+                  className={errors.name ? "border-red-500 focus:border-red-500" : ""}
                   required
                 />
+                {errors.name && (
+                  <p className="text-sm text-red-500">{errors.name}</p>
+                )}
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address *</Label>
@@ -129,8 +195,12 @@ export function ContactPopup({
                   placeholder="Enter your email"
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
+                  className={errors.email ? "border-red-500 focus:border-red-500" : ""}
                   required
                 />
+                {errors.email && (
+                  <p className="text-sm text-red-500">{errors.email}</p>
+                )}
               </div>
             </div>
 
@@ -140,11 +210,16 @@ export function ContactPopup({
                 <Input
                   id="phone"
                   type="tel"
-                  placeholder="Enter your phone number"
+                  placeholder="Enter 10-digit phone number"
                   value={formData.phone}
                   onChange={(e) => handleInputChange("phone", e.target.value)}
+                  className={errors.phone ? "border-red-500 focus:border-red-500" : ""}
+                  maxLength={10}
                   required
                 />
+                {errors.phone && (
+                  <p className="text-sm text-red-500">{errors.phone}</p>
+                )}
               </div>
               <div className="space-y-2">
                 <Label htmlFor="company">Company Name</Label>

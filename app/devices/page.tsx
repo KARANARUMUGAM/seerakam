@@ -38,8 +38,8 @@ export default function DevicesPage() {
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+                variant="default"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
               >
                 See Compatibility
               </Button>
@@ -207,8 +207,8 @@ export default function DevicesPage() {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 bg-transparent"
+              variant="default"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3"
             >
               Contact Sales
             </Button>
